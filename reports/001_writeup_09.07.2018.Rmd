@@ -12,3 +12,17 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Introduction
+
+To partially fulfill our course requirements, we planned and conducted an experiment to determine the friction factor of a straight PVC pipe. The apparatus is an Armfield flow bench instrumented for measuring pressure and flow rate. The experiment findings are compared to published values in a Moody chart. Results within 30% of expected values are considered successful.
+
+## Apparatus
+
+The apparatus is an Armfield flow bnech instrumented as illustrated in Figure 1. The flow bench has an adjustable flow pump that cycles water from a reservoir through the straight pipe and back to the reservoir. The pump speed is adjusted each trial to obtain a desired flow rate measured by a flow meter.
+
+## Modeling
+## Procedure
+## Data
+## Analysis
+## Results
+## Conclusion
+## References
