@@ -1,7 +1,14 @@
 ---
 output: html_document
 ---
-#_Experimental determination of friction factor_
+
+> [Layton] We will be using word_document oputput for the reports. Also, you can omit the italics formatting on the header when we move to tghe Word dodcument.   
+
+> [Layton] Otherwise, a very good start to the report. Nice work. 
+
+
+# _Experimental determination of friction factor_
+
 Author name  
 Rose-Hulman Institute of Technology  
 Date
