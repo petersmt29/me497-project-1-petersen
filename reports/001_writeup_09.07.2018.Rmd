@@ -1,13 +1,8 @@
 ---
-output: html_document
+output: word_document
 ---
 
-> [Layton] We will be using word_document oputput for the reports. Also, you can omit the italics formatting on the header when we move to tghe Word dodcument.   
-
-> [Layton] Otherwise, a very good start to the report. Nice work. 
-
-
-# _Experimental determination of friction factor_
+# Experimental determination of friction factor
 
 Author name  
 Rose-Hulman Institute of Technology  
@@ -116,7 +111,7 @@ Table 3. Mean friction factor and Reynolds number at three operating conditions.
 
 We see that the lower flow rates yield lower Reynolds numbers and higher friction factors, consistent with expectations from the Moody chart.
 
-These vvalues are graphed on the Moody chart in Figure 4. To assist in the visual comparison, the experimental data are drawn with circles and the expected values are shown as triange data markers.
+These values are graphed on the Moody chart in Figure 4. To assist in the visual comparison, the experimental data are drawn with circles and the expected values are shown as triange data markers.
 
 Overall, the experimental friction factors are higher than expected. The percent difference is shown in Table 4. All values are within 30% of the expected values.
 
@@ -133,7 +128,7 @@ Table 5. Summary of relative uncertainties for "low," "medium," and "high" flow 
 
 ## Conclusion
 
-The goal of this experiment was to determine friction factor of a straight pipe. That goal was achieved for three flow rates. Percent differences to expected values are within 30% and relative uncertainties are within 30%. Boht are acceptable norms for experiments of this type.
+The goal of this experiment was to determine friction factor of a straight pipe. That goal was achieved for three flow rates. Percent differences to expected values are within 30% and relative uncertainties are within 30%. Both are acceptable norms for experiments of this type.
 
 The discrepancies in our results could have been caused by unstable water flow from the flow bench. Unstable flow will make the height of the manometer unstable and hard to read an accurate number.
 
