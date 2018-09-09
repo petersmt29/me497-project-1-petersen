@@ -4,4 +4,3 @@
 
 1. Make sure you read the activity on creating the README. You can find it at <https://github.com/DSR-RHIT/me497-reproducible-research/blob/master/cm/cm1012_edit-readme.md> 
 2. Also, HTML files can be excused from version control, see my commenst os setting up gitignore  <https://github.com/DSR-RHIT/me497-reproducible-research/blob/master/cm/cm1009_gitignore.md> 
-3. Next, creeate a README.Rmd file for the project, see <https://github.com/DSR-RHIT/me497-reproducible-research/blob/master/cm/cm1012_edit-readme.md> 
