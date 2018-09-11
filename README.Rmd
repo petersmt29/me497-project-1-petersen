@@ -1,0 +1,22 @@
+---
+author: "Mary Petersen"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# a project on rewriting reproducibly
+Some prose 
+
+## report: experimental determination of friction factor
+Some prose 
+
+## next sub-heading 
+Some more prose 
+
+
+project context and summary
+what the project looks like in action
+how the reader might use the project
