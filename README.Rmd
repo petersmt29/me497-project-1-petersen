@@ -7,7 +7,7 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# the purpose: rewriting reproducibly
+## the purpose: rewriting reproducibly
 The goal of this project is to take a formerly non-reproducible report and transform it into a reproducible formart. Reproducible reports focus on connecting the written report or paper directly to the analysis and data behind the findings. By doing this, the risks of copy-paste errors are avoided and organization improves as well. This system simplifies processes when working with collaborators and makes it significantly easier when looking through past work. Let this project serve as an example of the transformation of a traditional report into a reproducible report and highlight the key benefits towards report writing in a reproducible manner.
 
 ## the report: experimental determination of friction factor
