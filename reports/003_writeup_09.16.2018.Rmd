@@ -1,9 +1,10 @@
 ---
 title: "Experimental determination of friction factor"
 author: "Mary Petersen"
-date: "9/16/2018"
+date: "`r format(Sys.time(), '%d&period; %B %Y')`"
 output: word_document
-bibliography: "../resources/project_1.bib"
+#bibliography: "../resources/project_1.bib"
+csl: "../resources/ieee.csl"
 ---
 
 ```{r setup, include=FALSE}
