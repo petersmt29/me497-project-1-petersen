@@ -1,7 +1,8 @@
 ---
 title: "Experimental determination of friction factor"
+subtitle: "Rose-Hulman Institute of Technology"
 author: "Mary Petersen"
-date: "`r format(Sys.time(), '%d&period; %B %Y')`"
+date: "`r format(Sys.time(), '%d %B %Y')`"
 output: word_document
 #bibliography: "../resources/project_1.bib"
 csl: "../resources/ieee.csl"
@@ -19,7 +20,10 @@ To partially fulfill our course requirements, we planned and conducted an experi
 
 The apparatus is an Armfield flow bnech instrumented as illustrated in Figure 1. The flow bench has an adjustable flow pump that cycles water from a reservoir through the straight pipe and back to the reservoir. The pump speed is adjusted each trial to obtain a desired flow rate measured by a flow meter.
 
-(insert image here)
+```{r, echo=FALSE}
+knitr::include_graphics("../resources/010_flow-bench-configuration.png")
+```
+
 Figure 1. Configuration of the flow bench
 
 Attached to the pipe are three manometers distanced at 20 cm apart for measuring fluid pressure at that point. Only two of the manometers are used.
@@ -28,43 +32,56 @@ Attached to the pipe are three manometers distanced at 20 cm apart for measuring
 
 For an incompressible fluid (in this experiment, water at room temperature) the pressure difference $\Delta{p}$ between two points along a straight pipe is modeled by the Darcy-Weisbach equation [@gerhart],
 
-$$\Delta{p} = f\frac{L}{D}\frac{1}{2}\rho v^2,$$
+$$\Delta{p} = f\frac{L}{D}\frac{1}{2}\rho v^2,$$ (1)
+
 where $L$ is the pipe length of the pipe, $D$ is the pipe inner diameter, $v$ is the fluid velocity, and $f$ is the friction factor, illustrated in Figure 2. Determining the friction factor is the goal of the experiment.
 
-(insert image here)
+```{r, echo=FALSE}
+knitr::include_graphics("../resources/011_illustration-data-reduction-eqn.jpg")
+```
+
 Figure 2. Illustrating the variables that appear in the data reduction equation.
 
 From hydrostatics, pressure at the base of each manometer is given by
 
-$$p = \rho gh,$$
+$$p = \rho gh,$$ (2)
+
 where $\rho$ is the fluid density and $h$ is the measured manometer fluid height. The pressure difference, therefore, is given by
 
-$$\delta{p} = \rho g(h_1-h_2).$$
+$$\delta{p} = \rho g(h_1-h_2).$$ (3)
+
 Substituting (3) into (1) and rearranging, we obtain an expression for the friction factor,
 
-$$f = \frac{2Dg(h_1-h_2)}{Lv^2}.$$
+$$f = \frac{2Dg(h_1-h_2)}{Lv^2}.$$ (4)
+
 Flow rate is the product of fluid velocity and pipe cross-sectional area A, thus, velocity can be written,
 
-$$v = \frac{\overset{.}{V}}{A}$$
+$$v = \frac{\overset{.}{V}}{A}$$ (5)
+
 where $\overset{.}{V}$ is measured flow rate and area $A$ of a circular pipe is $\pi D^2/4$. Substituting (5) and the area expression into (4) yields the data reduction equation,
 
-$$f = \frac{\pi^2D^5g(h_1-h_2)}{8L\overset{.}{V^2}}.$$
+$$f = \frac{\pi^2D^5g(h_1-h_2)}{8L\overset{.}{V^2}}.$$ (6)
+
 To compare our experimental results to the published values in a Moody chart, we compute the Reynolds number for each operating condition, given by,
 
-$$Re = \frac{\rho vD}{\nu},$$
+$$Re = \frac{\rho vD}{\nu},$$ (7)
+
 where $\nu$ is the dynamic viscosity of the fluid, a table look-up value for water at room temperature. Substituting for velocity, we obtain Reynolds number in terms of the measurands,
 
-$$Re = \frac{4\rho\overset{.}{V}}{\pi\nu D}.$$
+$$Re = \frac{4\rho\overset{.}{V}}{\pi\nu D}.$$ (8)
 
 ## Procedure
 
-Several one-time measurements and table look-ups are made. Measurements are made of the $D$ (using calipers) and $L$ (using a tape measure). Reference look-up values are obtained for PVC pipe roughness and water density and viscosity at room temperature. (citation needed)
+Several one-time measurements and table look-ups are made. Measurements are made of the $D$ (using calipers) and $L$ (using a tape measure). Reference look-up values are obtained for PVC pipe roughness and water density and viscosity at room temperature. (CITATION NEEDED)
 
 The test sequence is based on ten trials of three operating conditions. The operating conditions are a low, medium, and high flow rate (determined by the range of pump speeds available that produce steady flow rates). In this case, the three flow rates are approximately 1.5, 2.5, and 3.5 gallons per minute. Ten observations are planned for each flow rate and the test sequence is randomized.
 
 As shown in Figure 3, for each observation, the motor speed is adjusted until the flow rate measurement indicates steady flow at the desired flow rate. Manometer readings for that observation are recorded.
 
-(insert image here)
+```{r, echo=FALSE}
+knitr::include_graphics("../resources/012_apparatus-elements.jpg")
+```
+
 Figure 3. Elements of the apparatus important for the procedure.
 
 ## Data
