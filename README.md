@@ -1,16 +1,16 @@
 Mary Petersen
 
-catchy project name
-===================
+the purpose: rewriting reproducibly
+-----------------------------------
 
-Some prose
+The goal of this project is to take a formerly non-reproducible report and transform it into a reproducible format. Reproducible reports focus on connecting the written report or paper directly to the analysis and data behind the findings. By doing this, the risks of copy-paste errors are avoided and organization improves as well. This system simplifies processes when working with collaborators and makes it significantly easier when looking through past work. Let this project serve as an example of the transformation of a traditional report into a reproducible report and highlight the key benefits towards report writing in a reproducible manner.
 
-sub-heading
------------
+the report: experimental determination of friction factor
+---------------------------------------------------------
 
-Some prose
+The objective of this specific report is to determine the friction factor of a straight PVC pipe. An Armfield flow bench apparatus will be used, and the experimental friction values will be compared to the literature values in a Moody chart.
 
-next sub-heading
-----------------
+the apparatus: armfield flow bench
+----------------------------------
 
-Some more prose
+The Armfield flow bench apparatus functions using an adjustable flow pump, cycling water from a reservoir though the straight pipe and back. The pump speed is adjusted to the desired flow rate. Three manometers are attached to the pipe spaced 20 centimeters apart to measure pressure; however only two will be used.
