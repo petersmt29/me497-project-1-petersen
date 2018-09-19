@@ -72,7 +72,7 @@ $$Re = \frac{4\rho\overset{.}{V}}{\pi\nu D}.$$ (8)
 
 ## Procedure
 
-Several one-time measurements and table look-ups are made. Measurements are made of the $D$ (using calipers) and $L$ (using a tape measure). Reference look-up values are obtained for PVC pipe roughness and water density and viscosity at room temperature [@toolbox].
+Several one-time measurements and table look-ups are made. Measurements are made of the $D$ (using calipers) and $L$ (using a tape measure). Reference look-up values are obtained for PVC pipe roughness and water density and viscosity at room temperature (CITATION NEEDED).
 
 The test sequence is based on ten trials of three operating conditions. The operating conditions are a low, medium, and high flow rate (determined by the range of pump speeds available that produce steady flow rates). In this case, the three flow rates are approximately 1.5, 2.5, and 3.5 gallons per minute. Ten observations are planned for each flow rate and the test sequence is randomized.
 
@@ -100,13 +100,16 @@ knitr::kable(data)
 Table 2 lists the physical constants and one-time measurands. Values that may be uncertain are the pipe roughness and dynamic viscosity.
 
 Table 2. Constants and one-time measurands
-(insert table here)
+```{r, echo=FALSE}
+data <- read.csv("../data/constants.csv")
+knitr::kable(data)
+```
 
 The range for the surface roughness is 0.0015 to 0.007 mm, therefore we did not have an exact roughness value for our specific experimental PVC pipe.
 
 ## Analysis
 
-For a given flow rate, a Thompson tau test (citation needed) is performed to identify potential outliers. The test is repeated for each flow rate.
+For a given flow rate, a Thompson tau test (CITATION NEEDED) is performed to identify potential outliers. The test is repeated for each flow rate.
 
 For every trial, friction factor (6) and Reynolds number (8) are computed. At each of the three operating conditions (low, medium, and high flow rate) a mean friction factor and mean Reynolds number are determined.
 
@@ -114,10 +117,12 @@ These three mean values are graphed on a conventional Moody chart for comparison
 
 Total uncertainty of the friction factor is given by
 
-$$u_f^2 = u_{f,sys}^2 + u_{f,rand}^2,$$
+$$u_f^2 = u_{f,sys}^2 + u_{f,rand}^2,$$ (9)
+
 comprised of systematic and random components. Because each operating condition is assumed to be at steady state, random uncertainty is computed in either resultant. Systematic uncertainty is estimated by applying uncertainty propagation to the data reduction equation (6), yielding,
 
-$$u_{f,sys}^2 = a_{h_1}^2u_{h_1,sys}^2 + a_{D}^2u_{D,sys}^2 + a_{L}^2u_{L,sys}^2 + a_{\overset{.}{V}}^2u_{\overset{.}{V},sys}^2,$$
+$$u_{f,sys}^2 = a_{h_1}^2u_{h_1,sys}^2 + a_{D}^2u_{D,sys}^2 + a_{L}^2u_{L,sys}^2 + a_{\overset{.}{V}}^2u_{\overset{.}{V},sys}^2,$$ (10)
+
 where $a$ is the sensitivity coefficient and $u_sys$ si the systematic uncertainty in each measurand due to sensor accuracy and readability.
 
 Total uncertainty in Reynolds number is estimated in a similar manner. Additional details of the uncertainty analysis with numerical values is provided in an appendix.
@@ -129,7 +134,9 @@ The outlier tests indicate that no data were potential outliers, therefore, all 
 Average results for friction factor and Reynolds number at each operating condition are shown in Table 3.
 
 Table 3. Mean friction factor and Reynolds number at three operating conditions.
-(insert table here)
+```{r}
+#insert table 3 here
+```
 
 We see that the lower flow rates yield lower Reynolds numbers and higher friction factors, consistent with expectations from the Moody chart.
 
@@ -138,18 +145,23 @@ These values are graphed on the Moody chart in Figure 4. To assist in the visual
 Overall, the experimental friction factors are higher than expected. The percent difference is shown in Table 4. All values are within 30% of the expected values.
 
 Table 4. Friction factor comparison.
-(insert table here)
+```{r}
+#insert table 4 here
+```
+
 
 ```{r}
 #add moody chart graph here
 ```
+Figure 4. Resultants for "low," "medium," and "high" flow rates graphed on a Moody diagram [@davis].
 
-Figure 4. Resultants for "low," "medium," and "high" flow rates graphed on a Moody diagram. (Davis)
 
-Relative uncertainties are shown in Table 5. For fluid system results of this type, relative uncertainties fo 25% are common. (citation needed)
+Relative uncertainties are shown in Table 5. For fluid system results of this type, relative uncertainties fo 25% are common. (CITATION NEEDED)
 
 Table 5. Summary of relative uncertainties for "low," "medium," and "high" flow rates.
-(insert table here)
+```{r}
+#insert table 5 here
+```
 
 ## Conclusion
 
@@ -158,5 +170,3 @@ The goal of this experiment was to determine friction factor of a straight pipe.
 The discrepancies in our results could have been caused by unstable water flow from the flow bench. Unstable flow will make the height of the manometer unstable and hard to read an accurate number.
 
 ## References
-
-
