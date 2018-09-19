@@ -1,6 +1,6 @@
 library(tidyverse)
 
-data <- read.csv("data/complete-experimental-data.csv")
+data <- read.csv("./data/complete-experimental-data.csv")
 colnames(data) <- c("flow", "h1", "h2", "flow", "h1", "h2", "flow", "h1", "h2")
 units <- data[1,]
 data <- data[-1,]
