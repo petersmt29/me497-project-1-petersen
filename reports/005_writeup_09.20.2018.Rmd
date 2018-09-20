@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = TRUE,
                       message = FALSE,
                       warning = FALSE)
 library(tidyverse)
+library(captioner)
 ```
 
 ## Introduction
@@ -36,6 +37,13 @@ Attached to the pipe are three manometers distanced at 20 cm apart for measuring
 ## Modeling
 
 For an incompressible fluid (in this experiment, water at room temperature) the pressure difference $\Delta{p}$ between two points along a straight pipe is modeled by the Darcy-Weisbach equation [@gerhart],
+
+```{r echo=FALSE}
+eqn_id <- captioner(prefix = "eqn")
+eqn_id(name = "eqn_1")
+```
+
+$$\Delta{p} = f\frac{L}{D}\frac{1}{2}\rho v^2,$$ **(`r eqn_id("eqn_1", display = "num")`)**
 
 $$\Delta{p} = f\frac{L}{D}\frac{1}{2}\rho v^2,$$ (1)
 
