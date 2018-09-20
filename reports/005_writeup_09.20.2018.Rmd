@@ -140,8 +140,9 @@ The outlier tests indicate that no data were potential outliers, therefore, all 
 Average results for friction factor and Reynolds number at each operating condition are shown in Table 3.
 
 Table 3. Mean friction factor and Reynolds number at three operating conditions.
-```{r}
-#insert table 3 here
+```{r echo=FALSE}
+data <- read_csv("../results/mean-fricfac-reynum.csv")
+knitr::kable(data)
 ```
 
 We see that the lower flow rates yield lower Reynolds numbers and higher friction factors, consistent with expectations from the Moody chart.
