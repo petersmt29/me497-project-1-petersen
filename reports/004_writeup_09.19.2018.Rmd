@@ -75,7 +75,7 @@ $$Re = \frac{4\rho\overset{.}{V}}{\pi\nu D}.$$ (8)
 
 ## Procedure
 
-Several one-time measurements and table look-ups are made. Measurements are made of the $D$ (using calipers) and $L$ (using a tape measure). Reference look-up values are obtained for PVC pipe roughness and water density and viscosity at room temperature (CITATION NEEDED).
+Several one-time measurements and table look-ups are made. Measurements are made of the $D$ (using calipers) and $L$ (using a tape measure). Reference look-up values are obtained for PVC pipe roughness and water density and viscosity at room temperature [@toolbox].
 
 The test sequence is based on ten trials of three operating conditions. The operating conditions are a low, medium, and high flow rate (determined by the range of pump speeds available that produce steady flow rates). In this case, the three flow rates are approximately 1.5, 2.5, and 3.5 gallons per minute. Ten observations are planned for each flow rate and the test sequence is randomized.
 
@@ -89,7 +89,7 @@ Figure 3. Elements of the apparatus important for the procedure.
 
 ## Data
 
-The thirty observations are shown in Table 2. The data have been organized by flow rate. The test sequence in random order is given in an appendix.
+The thirty observations are shown in Table 2. The data have been organized by flow rate. The flow is measured in gpm and $h_1$ and $h_2$ are measured in mm.
 
 Table 1. Complete experimental data
 ```{r, echo=FALSE}
@@ -104,6 +104,7 @@ Table 2 lists the physical constants and one-time measurands. Values that may be
 
 Table 2. Constants and one-time measurands
 ```{r, echo=FALSE}
+options(scipen = 999)
 data <- read_csv("../data/constants.csv")
 knitr::kable(data)
 ```
@@ -112,7 +113,7 @@ The range for the surface roughness is 0.0015 to 0.007 mm, therefore we did not 
 
 ## Analysis
 
-For a given flow rate, a Thompson tau test (CITATION NEEDED) is performed to identify potential outliers. The test is repeated for each flow rate.
+For a given flow rate, a Thompson tau test [@thompson] is performed to identify potential outliers. The test is repeated for each flow rate.
 
 For every trial, friction factor (6) and Reynolds number (8) are computed. At each of the three operating conditions (low, medium, and high flow rate) a mean friction factor and mean Reynolds number are determined.
 
@@ -159,7 +160,7 @@ Table 4. Friction factor comparison.
 Figure 4. Resultants for "low," "medium," and "high" flow rates graphed on a Moody diagram [@davis].
 
 
-Relative uncertainties are shown in Table 5. For fluid system results of this type, relative uncertainties fo 25% are common. (CITATION NEEDED)
+Relative uncertainties are shown in Table 5. For fluid system results of this type, relative uncertainties fo 25% are common [@oberkampf].
 
 Table 5. Summary of relative uncertainties for "low," "medium," and "high" flow rates.
 ```{r}
