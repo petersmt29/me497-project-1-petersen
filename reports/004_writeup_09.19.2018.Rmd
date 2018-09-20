@@ -9,7 +9,10 @@ csl: "../resources/ieee.csl"
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE,
+                      message = FALSE,
+                      warning = FALSE)
+library(tidyverse)
 ```
 
 ## Introduction
@@ -91,7 +94,7 @@ The thirty observations are shown in Table 2. The data have been organized by fl
 Table 1. Complete experimental data
 ```{r, echo=FALSE}
 data <- read.csv("../data/complete-experimental-data.csv")
-colnames(data) <- c("Flow", "h1", "h2", "Flow", "h1", "h2", "Flow", "h1", "h2")
+colnames(data) <- c("Flow", "$h_1$", "$h_2$", "Flow", "$h_1$", "$h_2$", "Flow", "$h_1$", "$h_2$")
 data <- data[-1,]
 rownames(data) <- NULL
 knitr::kable(data)
@@ -101,7 +104,7 @@ Table 2 lists the physical constants and one-time measurands. Values that may be
 
 Table 2. Constants and one-time measurands
 ```{r, echo=FALSE}
-data <- read.csv("../data/constants.csv")
+data <- read_csv("../data/constants.csv")
 knitr::kable(data)
 ```
 
