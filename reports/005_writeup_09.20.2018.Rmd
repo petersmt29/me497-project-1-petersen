@@ -110,6 +110,8 @@ rownames(data) <- NULL
 knitr::kable(data)
 ```
 
+<br>
+
 Table 2 lists the physical constants and one-time measurands. Values that may be uncertain are the pipe roughness and dynamic viscosity.
 
 Table 2. Constants and one-time measurands
