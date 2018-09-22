@@ -155,6 +155,12 @@ data <- read_csv("../results/mean-fricfac-reynum.csv")
 knitr::kable(data)
 ```
 
+<br>
+
+> ----- Friction fractor is high by two orders of magnitude, what should I do?
+
+<br>
+
 We see that the lower flow rates yield lower Reynolds numbers and higher friction factors, consistent with expectations from the Moody chart.
 
 These values are graphed on the Moody chart in Figure 4. To assist in the visual comparison, the experimental data are drawn with circles and the expected values are shown as triange data markers.
@@ -162,23 +168,22 @@ These values are graphed on the Moody chart in Figure 4. To assist in the visual
 Overall, the experimental friction factors are higher than expected. The percent difference is shown in Table 4. All values are within 30% of the expected values.
 
 Table 4. Friction factor comparison.
-```{r}
-#insert table 4 here
+```{r echo=FALSE}
+data <- read_csv("../results/percent-diff.csv")
+knitr::kable(data)
 ```
 
 
-```{r}
-#add moody chart graph here
+```{r echo=FALSE}
+knitr::include_graphics("../resources/013_moody-diagram.png")
 ```
 Figure 4. Resultants for "low," "medium," and "high" flow rates graphed on a Moody diagram [@davis].
 
+<br>
 
-Relative uncertainties are shown in Table 5. For fluid system results of this type, relative uncertainties fo 25% are common [@oberkampf].
+> ----- I don't know how to plot the reference values and experimental values for friction factor on the image of the moody diagram, what should I do?
 
-Table 5. Summary of relative uncertainties for "low," "medium," and "high" flow rates.
-```{r}
-#insert table 5 here
-```
+<br>
 
 ## Conclusion
 
