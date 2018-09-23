@@ -5,7 +5,7 @@ author: "Mary Petersen"
 date: "`r format(Sys.time(), '%d %B %Y')`"
 output:
   word_document:
-    reference_docx: "../resources/word-styles-03.docx"
+    reference_docx: "../resources/word-styles-04.docx"
 bibliography: "../resources/project_1.bib"
 csl: "../resources/ieee.csl"
 ---
