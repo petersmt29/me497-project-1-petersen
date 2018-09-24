@@ -1,5 +1,5 @@
 ---
-title: "Experimental determination of friction factor123"
+title: "Experimental determination of friction factor"
 subtitle: "Rose-Hulman Institute of Technology"
 author: "Mary Petersen"
 date: "`r format(Sys.time(), '%d %B %Y')`"
@@ -17,6 +17,13 @@ knitr::opts_chunk$set(echo = TRUE,
 library(tidyverse)
 library(captioner)
 ```
+
+```{r}
+library(knitr)
+opts_knit$set(root.dir = "../")
+```
+
+
 
 ```{r echo=FALSE}
 table_id <- captioner(prefix="Table")
@@ -107,12 +114,22 @@ table_id(name="tbl_1", caption="Complete experimental data.")
 The thirty observations are shown in `r table_id("tbl_1", display = "cite")`. The data have been organized by flow rate. The flow is measured in gpm and $h_1$ and $h_2$ are measured in mm.
 
 ```{r, echo=FALSE}
-data <- read.csv("../data/complete-experimental-data.csv")
+data <- read.csv("data/complete-experimental-data.csv")
 colnames(data) <- c("Flow", "$h_1$", "$h_2$", "Flow", "$h_1$", "$h_2$", "Flow", "$h_1$", "$h_2$")
 data <- data[-1,]
 rownames(data) <- NULL
 knitr::kable(data, caption = table_id("tbl_1"))
 ```
+
+
+
+```{r}
+
+data <- read_csv("data/complete-experimental-data.csv")
+```
+
+
+
 
 ```{r echo=FALSE, results='hide'}
 table_id(name="tbl_2", caption="Constants and one-time measurands.")
@@ -122,7 +139,7 @@ table_id(name="tbl_2", caption="Constants and one-time measurands.")
 
 ```{r, echo=FALSE}
 options(scipen = 999)
-data <- read_csv("../data/constants.csv")
+data <- read_csv("data/constants.csv")
 knitr::kable(data, caption = table_id("tbl_2"))
 ```
 
@@ -159,7 +176,7 @@ table_id(name="tbl_3", caption="Mean friction factor and Reynolds number at thre
 Average results for friction factor and Reynolds number at each operating condition are shown in `r table_id("tbl_3", display = "cite")`.
 
 ```{r echo=FALSE}
-data <- read_csv("../results/mean-fricfac-reynum.csv")
+data <- read_csv("results/mean-fricfac-reynum.csv")
 knitr::kable(data, caption = table_id("tbl_3"))
 ```
 
@@ -184,8 +201,13 @@ table_id(name="tbl_4", caption="Friction factor comparison.")
 Overall, the experimental friction factors are higher than expected. The percent difference is shown in `r table_id("tbl_4", display = "cite")`. All values are within 30% of the expected values.
 
 ```{r echo=FALSE}
+<<<<<<< HEAD
+data <- read_csv("results/percent-diff.csv")
+knitr::kable(data, caption = table_id("tbl_3"))
+=======
 data <- read_csv("../results/percent-diff.csv")
 knitr::kable(data, caption = table_id("tbl_4"))
+>>>>>>> 7c835b8bd8f1ac8317d1babc188a9d06cd2914e1
 ```
 
 ###### ![](../resources/013_moody-diagram.png)
