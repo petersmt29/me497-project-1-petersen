@@ -1,5 +1,5 @@
 ---
-title: "Experimental determination of friction factor"
+title: "Experimental determination of whatever"
 subtitle: "Rose-Hulman Institute of Technology"
 author: "Mary Petersen"
 date: "`r format(Sys.time(), '%d %B %Y')`"
