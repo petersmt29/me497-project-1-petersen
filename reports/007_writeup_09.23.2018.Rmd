@@ -88,18 +88,6 @@ where $\nu$ is the dynamic viscosity of the fluid, a table look-up value for wat
 
 $$Re = \frac{4\rho\overset{.}{V}}{\pi\mu D}.$$ (8)
 
----
-
-> Mary. the authors made a significant error here. Dynamic viscosity is denoted with the symbol $\mu$ (not $\nu$) in both (7) and (8). 
->
-> For water, $\mu = 8.90 \times 10^{−4}$ Pa-s. 
->
-> So while their text claims they were using *dynamic viscosity* for water, they didn't. They used the value for *kinematic viscosity* $\nu$, which differs from the correct value by the density of water...about 1000 kg/m3.  This should repair the quantitative error in your reproduction. The formula should read 
->
-> $$Re = \frac{4\rho\overset{.}{V}}{\pi\mu D}.$$
-
----
-
 ## Procedure
 
 Several one-time measurements and table look-ups are made. Measurements are made of the $D$ (using calipers) and $L$ (using a tape measure). Reference look-up values are obtained for PVC pipe roughness and water density and viscosity at room temperature [@toolbox].
@@ -180,11 +168,11 @@ data <- read_csv("../results/mean-fricfac-reynum.csv")
 knitr::kable(data, caption = table_id("tbl_3"))
 ```
 
----
+<br>
 
-> Friction fractor is high by two orders of magnitude, what should I do?
+----- I fixed nu to mu and my friction fractor is still high by two orders of magnitude, what should I do?
 
----
+<br>
 
 We see that the lower flow rates yield lower Reynolds numbers and higher friction factors, consistent with expectations from the Moody chart.
 
@@ -207,14 +195,6 @@ knitr::kable(data, caption = table_id("tbl_3"))
 
 ###### ![](../resources/013_moody-diagram.png)
 ###### `r figure_id("fig_4")` 
-
----
-
-> I don't know how to plot the reference values and experimental values for friction factor on the image of the Moody diagram, what should I do?
->
-> OK, I've spent some time on it. It can be done, but will take more time than it is worth for this project. Go ahead and place a dot manually and the experimental values and another one for the expected values and scan that in as an image. 
-
----
 
 ## Conclusion
 
