@@ -5,9 +5,9 @@ author: "Mary Petersen"
 date: "`r format(Sys.time(), '%d %B %Y')`"
 output:
   word_document:
-    reference_docx: "../resources/word-styles-04.docx"
+    reference_docx: "../resources/word-styles-05.docx"
 bibliography: "../resources/project_1.bib"
-csl: "../resources/ieee.csl"
+#csl: "../resources/ieee.csl"
 ---
 
 ```{r setup, include=FALSE}
@@ -51,12 +51,7 @@ Attached to the pipe are three manometers distanced at 20 cm apart for measuring
 
 For an incompressible fluid (in this experiment, water at room temperature) the pressure difference $\Delta{p}$ between two points along a straight pipe is modeled by the Darcy-Weisbach equation [@gerhart],
 
-```{r echo=FALSE, results='hide'}
-eqn_id <- captioner(prefix = "eqn")
-eqn_id(name = "eqn_1")
-```
-
-$$\Delta{p} = f\frac{L}{D}\frac{1}{2}\rho v^2,$$ **(`r eqn_id("eqn_1", display = "num")`)**
+$$\Delta{p} = f\frac{L}{D}\frac{1}{2}\rho v^2,$$ (1)
 
 ```{r, echo=FALSE, results='hide'}
 figure_id(name = "fig_2", caption = "Illustrating the variables that appear in the data reduction equation.")
@@ -166,9 +161,9 @@ comprised of systematic and random components. Because each operating condition 
 
 $$u_{f,sys}^2 = a_{h_1}^2u_{h_1,sys}^2 + a_{D}^2u_{D,sys}^2 + a_{L}^2u_{L,sys}^2 + a_{\overset{.}{V}}^2u_{\overset{.}{V},sys}^2,$$ (10)
 
-where $a$ is the sensitivity coefficient and $u_sys$ si the systematic uncertainty in each measurand due to sensor accuracy and readability.
+where $a$ is the sensitivity coefficient and $u_{sys}$ is the systematic uncertainty in each measurand due to sensor accuracy and readability.
 
-Total uncertainty in Reynolds number is estimated in a similar manner. Additional details of the uncertainty analysis with numerical values is provided in an appendix.
+Total uncertainty in Reynolds number is estimated in a similar manner.
 
 ## Results
 
@@ -206,8 +201,13 @@ table_id(name="tbl_4", caption="Friction factor comparison.")
 Overall, the experimental friction factors are higher than expected. The percent difference is shown in `r table_id("tbl_4", display = "cite")`. All values are within 30% of the expected values.
 
 ```{r echo=FALSE}
+<<<<<<< HEAD
 data <- read_csv("results/percent-diff.csv")
 knitr::kable(data, caption = table_id("tbl_3"))
+=======
+data <- read_csv("../results/percent-diff.csv")
+knitr::kable(data, caption = table_id("tbl_4"))
+>>>>>>> 7c835b8bd8f1ac8317d1babc188a9d06cd2914e1
 ```
 
 ###### ![](../resources/013_moody-diagram.png)
