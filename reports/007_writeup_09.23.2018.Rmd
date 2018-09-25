@@ -18,12 +18,10 @@ library(tidyverse)
 library(captioner)
 ```
 
-```{r}
+```{r, echo=FALSE}
 library(knitr)
 opts_knit$set(root.dir = "../")
 ```
-
-
 
 ```{r echo=FALSE}
 table_id <- captioner(prefix="Table")
@@ -121,16 +119,6 @@ rownames(data) <- NULL
 knitr::kable(data, caption = table_id("tbl_1"))
 ```
 
-
-
-```{r}
-
-data <- read_csv("data/complete-experimental-data.csv")
-```
-
-
-
-
 ```{r echo=FALSE, results='hide'}
 table_id(name="tbl_2", caption="Constants and one-time measurands.")
 ```
@@ -180,11 +168,11 @@ data <- read_csv("results/mean-fricfac-reynum.csv")
 knitr::kable(data, caption = table_id("tbl_3"))
 ```
 
-<br>
+---
 
------ I fixed nu to mu and my friction fractor is still high by two orders of magnitude, what should I do?
+I fixed nu to mu and my friction fractor is still high by two orders of magnitude, what should I do?
 
-<br>
+---
 
 We see that the lower flow rates yield lower Reynolds numbers and higher friction factors, consistent with expectations from the Moody chart.
 
@@ -201,13 +189,8 @@ table_id(name="tbl_4", caption="Friction factor comparison.")
 Overall, the experimental friction factors are higher than expected. The percent difference is shown in `r table_id("tbl_4", display = "cite")`. All values are within 30% of the expected values.
 
 ```{r echo=FALSE}
-<<<<<<< HEAD
 data <- read_csv("results/percent-diff.csv")
-knitr::kable(data, caption = table_id("tbl_3"))
-=======
-data <- read_csv("../results/percent-diff.csv")
 knitr::kable(data, caption = table_id("tbl_4"))
->>>>>>> 7c835b8bd8f1ac8317d1babc188a9d06cd2914e1
 ```
 
 ###### ![](../resources/013_moody-diagram.png)
