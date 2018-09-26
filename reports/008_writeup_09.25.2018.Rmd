@@ -167,6 +167,12 @@ data <- read_csv("results/mean-fricfac-reynum.csv")
 knitr::kable(data, caption = table_id("tbl_3"))
 ```
 
+---
+
+My reynolds numbers are off compared to the original report, are my reynolds numbers correct?
+
+---
+
 We see that the lower flow rates yield lower Reynolds numbers and higher friction factors, consistent with expectations from the Moody chart.
 
 ```{r, echo=FALSE, results='hide'}

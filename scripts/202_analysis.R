@@ -1,5 +1,5 @@
-library(tidyverse)
 library(scales)
+library(tidyverse)
 
 df <- read_csv("results/tidy-experimental-data.csv")
 constants <- read_csv("data/constants.csv")
@@ -27,8 +27,10 @@ df <- df %>%
 
 
 #group mean friction factor and reynolds number by flow rate (1.5, 2.5, 3.5)
-dfGrouped <- df %>% group_by(flow) %>% summarise(fac = mean(fac),
+dfGrouped <- df %>% group_by(flow) %>% summarise(fac = round(mean(fac), digits = 4),
                                                  num = mean(num))
+
+dfGrouped$num <- dfGrouped$num %>% scientific(digits = 3)
 
 #make it pretty
 dfGrouped <- cbind(c("Low", "Medium", "High"), dfGrouped)
