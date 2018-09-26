@@ -1,4 +1,5 @@
 library(tidyverse)
+library(scales)
 
 df <- read_csv("results/tidy-experimental-data.csv")
 constants <- read_csv("data/constants.csv")
