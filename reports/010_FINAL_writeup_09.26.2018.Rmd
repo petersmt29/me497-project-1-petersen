@@ -1,12 +1,14 @@
 ---
 title: "Experimental determination of friction factor"
-subtitle: "Rose-Hulman Institute of Technology"
 author: "Mary Petersen"
 date: "`r format(Sys.time(), '%d %B %Y')`"
 output:
   word_document:
-    reference_docx: "../resources/word-styles-06.docx"
-bibliography: "../resources/project_1.bib"
+    reference_docx: ../resources/word-styles-06.docx
+  html_document:
+    df_print: paged
+subtitle: Rose-Hulman Institute of Technology
+bibliography: ../resources/project_1.bib
 ---
 
 ```{r setup, include=FALSE}
@@ -27,6 +29,56 @@ table_id <- captioner(prefix="Table")
 figure_id <- captioner(prefix = "Figure")
 ```
 
+
+## Comments on reproducibility (RAL)
+
+- We should have developed a new graph of some sort to meet all the expected criteria, but there were none in the original report. 
+- The R files are never sourced from the main Rmd report. This is a break in reproducibility continuity. The reader has to intuit that the scripts has to be run first. 
+- While most of the code in an R script is self-explantory, some commenting is expected to exlain the "why" of a code chunk even if the "what" is self-explantory. 
+
+
+
+## Rubric
+
+I apply two types of criteria---"major" and "required tasks"---each with its own  range of point values. You do not have to earn "honors level" in every dimension to earn an "A". The total point value possible is selected such that "Thorough competence" in all dimensions plus one "Honors level" will produce a score of about 92 %. In this report, the total is 125 points. 
+
+
+```{r, echo=FALSE}
+library(tidyverse)
+points_df <- tribble(
+  ~"Description", ~"Major criteria", ~"Required tasks", 
+ "Honors level",   16, 4,
+ "Thorough competence",   12, 3, 
+ "Meets minimum expectations",   8, 2, 
+ "Fails to meet minimum expectations",   4, 1
+  )
+kable(points_df)
+```
+
+Task criteria (4/3/2/1):    
+
+- 4 import an image 
+- 4 table or figure cross-referencing with captioner 
+- 4 R code chunks are used appropriately 
+- 4 a data table 
+- 4 results graph (NA in this case) 
+- 4 in-line R code used appropriately 
+- 4 equation correctly typeset 
+- 4 citation and reference 
+
+Major criteria (16/12/8/4)
+
+- 16 File management: Data, reports, resources, results, and scripts are saved in the recommended directory structure and are accessed by relevant read/write/source functions. 
+- 16 Scripts: R scripts are short, take in one input, do one thing, write the result to file. 
+- 4 Scripts: In reproducing your project, the reader has a clear and explicitly identified file name chain to follow if they wish to examine every step of the analysis. 
+- 4 Scripts: Sufficient commentary (in Rmd scripts) or comments (in R scripts) to understand the logic of the analysis. 
+- 16 Data are put into tidy form before analysis. 
+- 16 Analysis: New data would require that we change necessary file names in one location per input file; everything after that would automatically update. 
+- 16 Final report is docx-formatted using a reference styles document 
+
+Total: 120 / 125 = 96 %
+
+##### page break
 ## Introduction
 
 To partially fulfill our course requirements, we planned and conducted an experiment to determine the friction factor of a straight PVC pipe. The apparatus is an Armfield flow bench instrumented for measuring pressure and flow rate. The experiment findings are compared to published values in a Moody chart. Results within 30% of expected values are considered successful.
