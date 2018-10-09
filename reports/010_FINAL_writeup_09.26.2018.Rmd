@@ -34,10 +34,15 @@ figure_id <- captioner(prefix = "Figure")
 
 - We should have developed a new graph of some sort to meet all the expected criteria, but there were none in the original report. 
 - The R files are never sourced from the main Rmd report. This is a break in reproducibility continuity. The reader has to intuit that the scripts has to be run first. 
+<<<<<<< HEAD
 - While most of the code in an R script is self-explantory, some commenting is expected to exlain the "why" of a code chunk even if the "what" is self-explantory. 
 - add a bullet 
 
+=======
+- While most of the code in an R script is self-explantory, some commenting is expected to exlain the "why" of a code chunk even if the "what" is self-explantory.test
+>>>>>>> 988fcc34eb4994c3b27ff9352331aa69f50a500d
 
+add a sentence
 
 ## Rubric
 
